@@ -3,35 +3,38 @@
 # Fibonacci Example using (For/While Loop):
 
 # For TwoLoop:
-# prev2 = 0
-# prev1 = 1
+prev2 = 0
+prev1 = 1
 
-# print(prev2)
-# print(prev1)
+print(prev2)
+print(prev1)
 
-# for fibo in range(10):
-#     newFibo = prev1 + prev2
-#     prev2 = prev1
-#     prev1 = newFibo
-#     print(newFibo)
+for fibo in range(10):
+    newFibo = prev1 + prev2
+    prev2 = prev1
+    prev1 = newFibo
+    print(newFibo)
 
+print("---------------------------------------------")
 
 # Recursion (A function that calls itself):
-# print(0)
-# print(1)
-# count = 2
+print(0)
+print(1)
+count = 2
 
-# def fibonacci(prev1, prev2):
-#     global count
-#     if count <= 19:
-#         newFibo = prev1 + prev2
-#         print(newFibo)
-#         prev2 = prev1
-#         prev1 = newFibo
-#         count += 1
-#         fibonacci(prev1, prev2)
+def fibonacci(prev1, prev2):
+    global count
+    if count <= 19:
+        newFibo = prev1 + prev2
+        print(newFibo)
+        prev2 = prev1
+        prev1 = newFibo
+        count += 1
+        fibonacci(prev1, prev2)
 
-# fibonacci(1, 0)
+fibonacci(1, 0)
+
+print("---------------------------------------------")
 
 # Finding the nth Fibonacci Number using Recursion | F(n) = F(n-1) + F(n-2):
 def F(n):
